@@ -28,11 +28,126 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--light-grayish-blue);
+}
+
+.wrapper {
+    padding: 20px;
 }
 
 .container {
     max-width: 768px;
     margin: auto;
-    height: 200px;
 }
 
+.article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--desaturated-dark-blue);
+    background: #fff;
+}
+
+.article__content {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article__title {
+    font-size: 1.3rem;
+}
+
+.article__title, .article__text {
+    margin-bottom: 10px;
+}
+
+.article__title, .user-info__name {
+    color: var(--very-dark-grayish-blue);
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.article__image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.article__user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.share-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--light-grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.share-info__mobile {
+    position: absolute;
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: var(--very-dark-grayish-blue);
+    padding: 1rem 2rem;
+    transition: .7s;
+
+    .share-icon {
+        background: var(--desaturated-dark-blue);
+    }
+}
+
+.share-info__mobile-social-icon {
+    margin: 0 8px;
+}
+
+.share-info__mobile .share-info__mobile-social-icon:nth-child(4) {
+    flex-grow: 1;
+}
+
+.share-info__mobile.share-info__mobile--active {
+    bottom: 0;
+}
+
+.share-info__mobile-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 499px) {
+    .article {
+        flex-direction: column;
+    }
+
+    .share-info__mobile {
+        display: flex;
+    }
+}

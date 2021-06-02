@@ -59,6 +59,8 @@ body {
   border-radius: 10px;
   color: var(--desaturated-dark-blue);
   background: #fff;
+  -webkit-box-shadow: 5px 10px 20px rgba(158, 175, 194, 0.7);
+          box-shadow: 5px 10px 20px rgba(158, 175, 194, 0.7);
 }
 
 .article__content {
